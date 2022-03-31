@@ -14,7 +14,12 @@
           <h1 class="form__title">Отправка данных на почту</h1>
           <div class="form__item">
             <label for="formName" class="form__label">Имя*:</label>
-            <input id="formName" type="text" name="name" class="form__input" />
+            <input
+              id="formName"
+              type="text"
+              name="name"
+              class="form__input _req"
+            />
           </div>
           <div class="form__item">
             <label for="formEmail" class="form__label">E-mail*:</label>
@@ -22,7 +27,7 @@
               id="formEmail"
               type="text"
               name="email"
-              class="form__input"
+              class="form__input _req _email"
             />
           </div>
           <div class="form__item">
@@ -38,7 +43,7 @@
                   class="options__input"
                 />
                 <label for="formRightHanded" class="options__label"
-                  >Правша</label
+                  ><span>Правша</span></label
                 >
               </div>
               <div class="options__item">
@@ -49,7 +54,9 @@
                   name="hand"
                   class="options__input"
                 />
-                <label for="formLeftHanded" class="options__label">Левша</label>
+                <label for="formLeftHanded" class="options__label"
+                  ><span>Левша</span></label
+                >
               </div>
             </div>
           </div>
@@ -63,7 +70,7 @@
           </div>
           <div class="form__item">
             <div class="form__label">Возраст:</div>
-            <select name="age" class="select">
+            <select name="age" class="form__select">
               <option value="от 18 до 25" selected="selected">Молодой</option>
               <option value="от 25 до 45">Старый</option>
               <option value="от 45">Супер старый</option>
@@ -81,7 +88,7 @@
                   class="file__input"
                 />
                 <div class="file__button">Выбрать</div>
-                <div class="file__preview"></div>
+                <div id="formPreview" class="file__preview"></div>
               </div>
             </div>
           </div>
@@ -92,12 +99,13 @@
                 checked
                 type="checkbox"
                 name="agreement"
-                class="checkbox__input"
+                class="checkbox__input _req"
               />
               <label for="formAgreement" class="checkbox__label"
                 ><span
                   >Я даю свое согласие на обработку персональных данных в
-                  соответствии с условием</span
+                  соответствии с
+                  <a href="https://developer.mozilla.org">условием</a></span
                 ></label
               >
             </div>
